@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chirag Goyal — Hero Section</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="margin:0;background:#0d2119;">
+  <!-- Recreated Hero Section -->
+  <section class="hero-live" aria-label="Chirag Goyal hero">
+    <img class="hero-live-image" src="assets/hero-bg.png" alt="Chirag Goyal in his office" fetchpriority="high">
+    <div class="hero-live-shade" aria-hidden="true"></div>
+
+    <!-- Floating Top Navigation -->
+    <div class="hero-live-nav">
+      <a class="hero-live-brand" href="index.html" aria-label="Chirag Goyal — Home">
+        <span class="hero-brand-title">CHIRAG GOYAL</span>
+        <span class="hero-brand-sub">— PEOPLE · PURPOSE · POSSIBILITY</span>
+      </a>
+      <nav aria-label="Hero navigation">
+        <a href="index.html" aria-current="page">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="journey.html">JOURNEY</a>
+        <a href="work.html">MY WORK</a>
+        <a href="ekjut.html">EKJUT</a>
+        <a href="stories.html">PRESS</a>
+        <a href="stories.html">STORIES</a>
+        <a href="impact.html">IMPACT</a>
+        <a href="collaborate.html">COLLABORATE</a>
+        <a href="collaborate.html#contact">CONTACT</a>
+        <a class="hero-search" href="stories.html" aria-label="Search stories">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </a>
+      </nav>
+      <button class="hero-menu" type="button" aria-expanded="false" aria-label="Toggle navigation">Menu <span aria-hidden="true">☰</span></button>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="hero-drawer" id="hero-drawer" aria-hidden="true">
+      <button class="hero-drawer-close" type="button" aria-label="Close menu">Close ×</button>
+      <div class="hero-drawer-links">
+        <a href="index.html" aria-current="page">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="journey.html">JOURNEY</a>
+        <a href="work.html">MY WORK</a>
+        <a href="ekjut.html">EKJUT</a>
+        <a href="stories.html">PRESS</a>
+        <a href="stories.html">STORIES</a>
+        <a href="impact.html">IMPACT</a>
+        <a href="collaborate.html">COLLABORATE</a>
+        <a href="collaborate.html#contact">CONTACT</a>
+      </div>
+    </div>
+
+    <!-- Left Hero Content -->
+    <div class="hero-live-copy">
+      <p class="hero-kicker">— A MORE COMPASSIONATE,<br>CONNECTED NEPAL IS POSSIBLE.</p>
+      <h1>Bringing people,<br>resources and ideas<br>together to create<br>meaningful change.</h1>
+      <div class="hero-rule" aria-hidden="true"></div>
+      <p class="hero-role">Executive Director<br><span>Goyal Group Nepal</span></p>
+      <div class="hero-actions">
+        <a class="hero-btn hero-btn-primary" href="journey.html">EXPLORE MY JOURNEY <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="hero-btn hero-btn-secondary" href="ekjut.html">DISCOVER EKJUT <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+
+    <!-- Right-Side Decorative Accent -->
+    <aside class="hero-live-aside" aria-hidden="true">
+      <span>People<br>Communities<br>Opportunities<br>A Stronger Nepal</span>
+      <div class="aside-rule"></div>
+    </aside>
+
+    <!-- Scroll Indicator -->
+    <a class="hero-scroll" href="#about" aria-label="Scroll to explore">
+      <span class="scroll-line" aria-hidden="true"></span>
+      <span>SCROLL TO EXPLORE</span>
+      <span class="scroll-chevron" aria-hidden="true">⌄</span>
+    </a>
+  </section>
+
+  <script>
+    const heroMenuBtn = document.querySelector('.hero-menu');
+    const heroDrawer = document.getElementById('hero-drawer');
+    const heroDrawerClose = document.querySelector('.hero-drawer-close');
+    function closeHeroDrawer() {
+      if (heroDrawer) {
+        heroDrawer.classList.remove('is-open');
+        heroDrawer.setAttribute('aria-hidden', 'true');
+        heroMenuBtn?.setAttribute('aria-expanded', 'false');
+      }
+    }
+    if (heroMenuBtn && heroDrawer) {
+      heroMenuBtn.addEventListener('click', () => {
+        const open = !heroDrawer.classList.contains('is-open');
+        heroDrawer.classList.toggle('is-open', open);
+        heroDrawer.setAttribute('aria-hidden', String(!open));
+        heroMenuBtn.setAttribute('aria-expanded', String(open));
+      });
+      heroDrawerClose?.addEventListener('click', closeHeroDrawer);
+      heroDrawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeHeroDrawer));
+    }
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && heroDrawer?.classList.contains('is-open')) {
+        closeHeroDrawer();
+        heroMenuBtn?.focus();
+      }
+    });
+  </script>
+</body>
+</html>
