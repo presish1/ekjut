@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Ekjut Nepal profile logo</title>
+  <desc id="desc">A square deep green logo with a connected people symbol and the word Ekjut.</desc>
+  <defs>
+    <style>
+      .wordmark{font-family:Montserrat,Arial,sans-serif;font-weight:700;letter-spacing:18px}
+      .tagline{font-family:Montserrat,Arial,sans-serif;font-weight:600;letter-spacing:9px}
+    </style>
+  </defs>
+  <rect width="1080" height="1080" rx="112" fill="#193f35"/>
+  <g transform="translate(540 354)" fill="none" stroke="#dce9ae" stroke-width="38" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="0" cy="-86" r="68" fill="#dce9ae" stroke="none"/>
+    <circle cx="-151" cy="44" r="54"/>
+    <circle cx="151" cy="44" r="54"/>
+    <path d="M-108 77C-72 119-37 140 0 140s72-21 108-63"/>
+    <path d="M-106 16C-76-17-41-34 0-34s76 17 106 50"/>
+  </g>
+  <text class="wordmark" x="540" y="690" text-anchor="middle" font-size="154" fill="#f7f5ee">EKJUT</text>
+  <line x1="238" y1="751" x2="842" y2="751" stroke="#6e8d7e" stroke-width="3"/>
+  <text class="tagline" x="540" y="822" text-anchor="middle" font-size="31" fill="#dce9ae">MANY PEOPLE · ONE PURPOSE</text>
+</svg>
